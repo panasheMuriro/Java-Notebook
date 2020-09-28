@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane style="-fx-background-color: #b7472a" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<top>
+    <Label alignment="CENTER" prefHeight="86.0" prefWidth="311.0" text="Java Notebook" textAlignment="CENTER" textFill="#ffffff">
+        <font>
+            <Font name="Comic Sans MS" size="40.0" />
+        </font>
+    </Label>
+</top>
+    <left>
+        <ListView fx:id="TodoListView" onMouseClicked="#showDescriptions" style="-fx-control-inner-background: #eb9788;">
+
+        </ListView>
+    </left>
+    <center>
+        <Label />
+        <VBox>
+            <TextArea fx:id="itemsDescriptions" prefHeight="453.0" prefWidth="404.0" style="-fx-control-inner-background: #ffd5ab; -fx-background-color: #ffd5ab;" wrapText="true">
+                <font>
+                    <Font name="Times New Roman" size="15" />
+                </font>
+            </TextArea>
+            <Button fx:id="deleteButton" contentDisplay="CENTER" onAction="#delete" prefHeight="30" prefWidth="100" text="Delete">
+                <font>
+                    <Font name="Times New Roman" size="20" />
+                </font>
+            </Button>
+        </VBox>
+
+    </center>
+   <bottom>
+<!--       <Button onAction="#print" text="Print" GridPane.rowIndex="1" style="" prefWidth="100" prefHeight="30"/>-->
+   </bottom>
+<right>
+
+    <VBox onMouseEntered="#showdate" prefHeight="453.0" prefWidth="524.0">
+        <Label fx:id="time" onMouseClicked="#showdate" style="-fx-color: white" textAlignment="CENTER" textFill="white">
+<font>
+    <Font name="Times New Roman" size="40" />
+</font>
+        </Label>
+
+       <Label>
+
+
+       </Label> <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#showdate" text="Title" textAlignment="CENTER" textFill="white">
+            <font>
+                <Font name="Century Gothic" size="20.0" />
+            </font>
+        </Label>
+        <Label>
+        </Label>
+        <TextField fx:id="notetitle" prefHeight="28.0" prefWidth="519.0" style="-fx-control-inner-background: #f5b971" >
+            <font>
+                <Font name="Times New Roman" size="15" />
+            </font>
+        </TextField>
+        <Label prefHeight="17.0" prefWidth="203.0">
+
+        </Label>
+        <Label text="Content" textFill="white">
+            <font>
+                <Font name="Century Gothic" size="20.0" />
+            </font>
+        </Label>
+        <Label>
+        </Label>
+        <TextArea fx:id="notecontent" style="-fx-control-inner-background: #f5b971" wrapText="true">
+            <font>
+                <Font name="Times New Roman" size="15" />
+            </font>
+        </TextArea>
+ <Label>
+ </Label>
+    <Button fx:id="saveButton" contentDisplay="CENTER" onAction="#save" prefHeight="30" prefWidth="100" text="Save">
+        <font>
+            <Font name="Times New Roman" size="20" />
+        </font>
+    </Button>
+        <Label text="ROAR 2020" textFill="white">
+            <font>
+                <Font name="Century Gothic" size="20.0" />
+            </font>
+        </Label>
+    </VBox>
+
+</right>
+</BorderPane>
